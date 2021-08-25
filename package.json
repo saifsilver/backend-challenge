@@ -1,0 +1,35 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "Bank Finder Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifsilver/backend-challenge.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "fastify"
+  ],
+  "author": "Saif Sulaiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifsilver/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/saifsilver/backend-challenge#readme",
+  "dependencies": {
+    "fastify": "^3.20.2",
+    "fastify-jwt": "^3.0.1",
+    "fastify-postgres": "^3.6.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "got": "^11.8.2",
+    "nodemon": "^2.0.12",
+    "tape": "^5.3.1"
+  }
+}
