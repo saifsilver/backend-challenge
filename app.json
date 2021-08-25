@@ -1,0 +1,8 @@
+{
+    "name": "Start on Heroku: Node.js",
+    "description": "A barebones Node.js app using Fastify",
+    "repository": "https://github.com/saifsilver/backend-cc",
+    "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+    "keywords": ["node", "fastify", "heroku"],
+    "image": "heroku/nodejs"
+  }
