@@ -4,29 +4,25 @@ Bank Finder
 # The following Apis Implemented
 
 ### Login To Get JWT Token
-POST https://interview-coding-challenge.herokuapp.com/v1/login HTTP/1.1
-content-type: application/json
-
-{
-    "username": "demo",
-    "password": "123456"
-}
+curl --request POST \
+  --url https://interview-coding-challenge.herokuapp.com/v1/login \
+  --header 'content-type: application/json' \
+  --header 'user-agent: vscode-restclient' \
+  --data '{"username": "saif007","password": "123456"}'
 
 
 ###  SET JWT Token and Get Bank Details
-GET https://interview-coding-challenge.herokuapp.com/v1/banks/SBIN0004722 HTTP/1.1
-content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhaWYwMDciLCJwYXNzd29yZCI6IjEyMzQ1NiIsInJvbGUiOlsiYWRtaW4iXSwiaWF0IjoxNjI5ODc2NjM0LCJleHAiOjE2MzAzMDg2MzR9.BWOXsytMJ5eOQAOi0DSqxQFLhBbspthTMYef67VTRNs`
+curl --request GET \
+  --url https://interview-coding-challenge.herokuapp.com/v1/banks/ABHY0065022 \
+  --header 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhaWYwMDciLCJwYXNzd29yZCI6IjEyMzQ1NiIsInJvbGUiOlsiYWRtaW4iXSwiaWF0IjoxNjI5ODgwNzEwLCJleHAiOjE2MzAzMTI3MTB9.vmqozqTplVT2Yq3IRbeI53YY_rOS74oC0tEtEt_kgk8' \
+  --header 'content-type: application/json' \
+  --header 'user-agent: vscode-restclient'
 
 
 ###  SET JWT Token and GET BANK BRANCH IN A CITY
-POST https://interview-coding-challenge.herokuapp.com/v1/list-branches HTTP/1.1
-content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhaWYwMDciLCJwYXNzd29yZCI6IjEyMzQ1NiIsInJvbGUiOlsiYWRtaW4iXSwiaWF0IjoxNjI5ODc2NjM0LCJleHAiOjE2MzAzMDg2MzR9.BWOXsytMJ5eOQAOi0DSqxQFLhBbspthTMYef67VTRNs
-
-{
-    "bank_name": "STATE BANK OF INDIA",
-    "city": "PALAKKAD",
-    "page": "10",
-    "limit": "3"
-}
+curl --request POST \
+  --url https://interview-coding-challenge.herokuapp.com/v1/list-branches \
+  --header 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhaWYwMDciLCJwYXNzd29yZCI6IjEyMzQ1NiIsInJvbGUiOlsiYWRtaW4iXSwiaWF0IjoxNjI5ODgwNzEwLCJleHAiOjE2MzAzMTI3MTB9.vmqozqTplVT2Yq3IRbeI53YY_rOS74oC0tEtEt_kgk8' \
+  --header 'content-type: application/json' \
+  --header 'user-agent: vscode-restclient' \
+  --data '{"bank_name": "ABHYUDAYA COOPERATIVE BANK LIMITED","city": "MUMBAI","page": "1","limit": "3"}'
