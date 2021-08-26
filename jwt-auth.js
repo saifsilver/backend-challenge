@@ -2,7 +2,7 @@ const fastifyPlugin = require('fastify-plugin')
 
 async function initJWT(fastify, options) {
     fastify.register(require('fastify-jwt'), {
-        secret: 'secret123'
+        secret: process.env.JWT_SECRET,
     })
 
     fastify.decorate("authenticate", async (request, reply) => {
